@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>ShopHub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search products...">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Products</h2>
+      <div class="filters">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('electronics')">Electronics</button>
+        <button onclick="filterProducts('fashion')">Fashion</button>
+      </div>
+      <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <div id="chatbot">
+        <div id="chatbot-header">
+          <h4>Need Help?</h4>
+          <button onclick="toggleChat()">Chat</button>
+        </div>
+        <div id="chatbot-body" class="hidden">
+          <div id="chat-messages"></div>
+          <input type="text" id="chat-input" placeholder="Ask me anything...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ShopHub. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
